@@ -1,5 +1,5 @@
 import FormImageUpload from "./FormImageUpload";
-import FormInput from "./formInput";
+import FormInput from "./FormInput";
 import FormDescription from "./FormDescription";
 import FormButton from "./FormButton";
 import { useEffect, useState } from "react";
