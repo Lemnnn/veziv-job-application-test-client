@@ -14,7 +14,7 @@ const FormImageUpload = ({ name, type, onChange, accept, image }) => {
       >
         {isEditing && !image && contextImage !== "" ? (
           <img
-            src={`http://localhost:3001/images/${contextImage}`}
+            src={`https://veziv-server-production.up.railway.app/images/${contextImage}`}
             className="max-w-full max-h-full rounded-lg object-cover"
           />
         ) : (

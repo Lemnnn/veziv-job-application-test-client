@@ -22,7 +22,7 @@ const Card = ({ work }) => {
       {work.image ? (
         <img
           className="aspect-[5/3] overflow-hidden rounded-t-lg object-cover"
-          src={`http://localhost:3001/images/${work.image}`}
+          src={`https://veziv-server-production.up.railway.app/images/${work.image}`}
           alt="Uploaded"
           width="500"
           height="300"

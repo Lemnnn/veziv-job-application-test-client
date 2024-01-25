@@ -43,6 +43,7 @@ const Form = () => {
 
   useEffect(() => {
     if (isEditing) {
+      setImageName(selectedCard.image);
       setLink(selectedCard.link);
       setDescription(selectedCard.description);
       setTitle(selectedCard.title);

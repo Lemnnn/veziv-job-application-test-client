@@ -16,9 +16,11 @@ export function DataProvider({ children }) {
   const [isClosed, setIsClosed] = useState(true);
 
   async function getData() {
-    await axios.get("http://localhost:3001/read").then((response) => {
-      setWorkList(response.data);
-    });
+    await axios
+      .get("https://veziv-server-production.up.railway.app/read")
+      .then((response) => {
+        setWorkList(response.data);
+      });
   }
 
   useEffect(() => {
@@ -31,7 +33,10 @@ export function DataProvider({ children }) {
     try {
       const formData = { image, title, link, description };
 
-      await axios.post("http://localhost:3001/create", formData);
+      await axios.post(
+        "https://veziv-server-production.up.railway.app/create",
+        formData
+      );
       getData();
     } catch (error) {
       console.error(error);
@@ -39,14 +44,19 @@ export function DataProvider({ children }) {
   };
 
   const deleteWork = async (id) => {
-    await axios.delete(`http://localhost:3001/delete/${id}`);
+    await axios.delete(
+      `https://veziv-server-production.up.railway.app/delete/${id}`
+    );
     getData();
   };
 
   const toggleHidden = async (id, body) => {
-    await axios.patch(`http://localhost:3001/toggleHidden/${id}`, {
-      hidden: body,
-    });
+    await axios.patch(
+      `https://veziv-server-production.up.railway.app/toggleHidden/${id}`,
+      {
+        hidden: body,
+      }
+    );
     getData();
   };
 
@@ -65,7 +75,10 @@ export function DataProvider({ children }) {
       description,
     };
 
-    await axios.patch(`http://localhost:3001/update/${id}`, updatedData);
+    await axios.patch(
+      `https://veziv-server-production.up.railway.app/update/${id}`,
+      updatedData
+    );
     getData();
   };
 
@@ -75,7 +88,7 @@ export function DataProvider({ children }) {
       formData.append("image", image);
 
       const response = await axios.post(
-        "http://localhost:3001/uploadImage",
+        "https://veziv-server-production.up.railway.app/uploadImage",
         formData
       );
 
