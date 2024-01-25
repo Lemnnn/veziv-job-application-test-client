@@ -10,8 +10,8 @@ const Works = () => {
     <div
       className={
         isClosed
-          ? "flex-1 grid gap-6 px-6 pb-5 pt-5 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1"
-          : "flex-1 grid gap-6 px-6 pb-5 pt-5 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1 max-md:hidden"
+          ? "flex-1 grid gap-6 px-6 pb-5 pt-5 min-[2440px]:grid-cols-4 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1"
+          : "flex-1 grid gap-6 px-6 pb-5 pt-5 min-[2440px]:grid-cols-4 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1 max-md:hidden"
       }
     >
       <div
